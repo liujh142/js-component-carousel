@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="lan-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel-box{
+            position: relative;
+            width: 500px;
+            height: 250px;
+            margin: 200px auto;
+            overflow: hidden;
+        }
+        a{
+            text-decoration: none;
+        }
+        .carousel-box li,
+        .carousel-box ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .carousel-box ul::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        .carousel-box .img-ct{
+            width: 1500px;
+            height: 100%;
+        }
+        .img-ct li,img{
+            width: 500px;
+            height: 250px;
+        }
+        .img-ct li{
+            float: left;
+        }
+        .pre{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        .next{
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+        .arrow{
+            display: block;
+            text-decoration: none;
+            color: rgb(255, 255, 255,0.9);
+            font-size: 70px;
+            transform: translateY(-50%);
+        }
+        .bullet{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .bullet li{
+            float: left;
+            margin-left:20px;
+            width: 50px;
+            height: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255,0.5);
+            cursor: pointer;
+        }
+        .bullet li.active{
+            background-color: white;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+<body>
+    <div class="carousel-box">
+        <ul class="img-ct">
+            <li><a href="#"><img src="/01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="/02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="/03.jpg" alt=""></a></li>
+        </ul>
+        <a href="#" class="pre arrow">&lt;</a>
+        <a href="#" class="next arrow">&gt;</a>
+        <ul class="bullet">
+            <li class="active"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </div>
+    <script src="/carousel.js"></script>
+</body>
+</html> 
